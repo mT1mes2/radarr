@@ -7,11 +7,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Amsterdam
     volumes:
-      - /home/time/docker/data:/config
-      - /home/time/docker/movies:/movies #optional
-      - /home/time/docker/downloadclient-downloads:/downloads #optional
+      - /home/time/docker/radarr/data:/config
+      - /home/time/docker/radarr/movies:/movies #optional
+      - /home/time/docker/radarr/downloadclient-downloads:/downloads #optional
     ports:
       - 7878:7878
     restart: unless-stopped
